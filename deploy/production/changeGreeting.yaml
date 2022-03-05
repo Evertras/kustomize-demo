@@ -4,4 +4,4 @@ metadata:
   name: hello-map
 data:
   # We don't overwrite the risky feature setting, so it will persist from base
-  altGreeting: "Hello from prod!"
+  altGreeting: "Hello from prod!  Please be careful..."

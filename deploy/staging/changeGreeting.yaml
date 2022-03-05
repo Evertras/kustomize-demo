@@ -4,5 +4,5 @@ metadata:
   name: hello-map
 data:
   # These entries will overwrite the existing ones in base
-  altGreeting: "Hello from prod!"
+  altGreeting: "Hello from staging!"
   enableRisky: "true"
