@@ -41,6 +41,9 @@ Now we can check the output by going to:
 * Stg: http://localhost:8667
 * Prod: http://localhost:8668
 
+Note the different version numbers, different greetings, and that dev/stg are
+using an italic font (the 'risky feature') while production does not.
+
 ## Deleting
 
 To delete, just do the same as `apply` but with `delete`:
