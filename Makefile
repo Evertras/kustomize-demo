@@ -8,15 +8,15 @@ base: ./bin/kustomize
 	./bin/kustomize build deploy/base
 
 .PHONY: dev
-dev:
+dev: ./bin/kustomize
 	./bin/kustomize build deploy/development
 
 .PHONY: stg
-stg:
+stg: ./bin/kustomize
 	./bin/kustomize build deploy/staging
 
 .PHONY: prod
-prod:
+prod: ./bin/kustomize
 	./bin/kustomize build deploy/production
 
 ./bin/kustomize:
