@@ -1,0 +1,18 @@
+resources:
+  - ../base
+  - namespace.yaml
+
+commonLabels:
+  environment: production
+
+namePrefix: prod-
+
+# Use the namespace defined in the new resource
+namespace: hello-prod
+
+patchesStrategicMerge:
+  - service.yaml
+  - changeGreeting.yaml
+  # Note that this file has a small, easy to read change... we could apply
+  # multiple files all targeting the same resource that all make small changes
+  - scaleUp.yaml

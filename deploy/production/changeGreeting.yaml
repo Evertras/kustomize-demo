@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-map
+data:
+  # We don't overwrite the risky feature setting, so it will persist from base
+  altGreeting: "Hello from prod!"

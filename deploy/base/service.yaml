@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service
+spec:
+  selector:
+    deployment: hello
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 8666
+    targetPort: 8080
+    name: main

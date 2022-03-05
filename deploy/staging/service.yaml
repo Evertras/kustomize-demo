@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service
+spec:
+  ports:
+    # Delete the old port
+    - port: 8666
+      targetPort: 8080
+      protocol: TCP
+      $patch: delete
+    # Add our new port
+    - port: 8667
+      targetPort: 8080
+      protocol: TCP
+      name: main

@@ -1,0 +1,23 @@
+# We could add more resources here, but for now base is fine
+resources:
+  - '../base'
+
+# Applies this prefix to all resource names
+namePrefix: dev-
+
+# Applies these labels to all resources
+commonLabels:
+  environment: development
+
+# Applies these annotations to all resources
+commonAnnotations:
+  my-annotation: Dev hype
+
+# Contains specific key/value changes to patch in
+patchesStrategicMerge:
+  - configMap.yaml
+
+# Let's use a bleeding edge version!
+images:
+  - name: monopole/hello
+    newTag: "2"

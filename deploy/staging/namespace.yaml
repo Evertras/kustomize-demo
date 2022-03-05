@@ -1,0 +1,5 @@
+# Create a namespace just for staging
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: hello-prod

@@ -1,0 +1,17 @@
+resources:
+  - ../base
+  # This time we add a new resource... probably not a good idea to potentially
+  # delete a full namespace by undoing this later, but just a demo!
+  - namespace.yaml
+
+commonLabels:
+  environment: staging
+
+namePrefix: stg-
+
+# Use the namespace defined in the new resource
+namespace: hello-stg
+
+patchesStrategicMerge:
+  - service.yaml
+  - changeGreeting.yaml
