@@ -30,9 +30,9 @@ make prod
 We can use the built in `kubectl -k` flag to send Kustomize definitions.
 
 ```bash
-kubectl -k deploy/development
-kubectl -k deploy/staging
-kubectl -k deploy/production
+kubectl apply -k deploy/development
+kubectl apply -k deploy/staging
+kubectl apply -k deploy/production
 ```
 
 Now we can check the output by going to:
@@ -40,3 +40,13 @@ Now we can check the output by going to:
 * Dev: http://localhost:8666
 * Stg: http://localhost:8667
 * Prod: http://localhost:8668
+
+## Deleting
+
+To delete, just do the same as `apply` but with `delete`:
+
+```bash
+kubectl delete -k deploy/development
+kubectl delete -k deploy/staging
+kubectl delete -k deploy/production
+```
